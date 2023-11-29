@@ -1,0 +1,30 @@
+plugins {
+    id 'java'
+}
+
+group = 'org.example'
+version = '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation group: 'org.junit.jupiter', name: 'junit-jupiter-api', version: '5.8.1'
+    implementation group: 'org.junit.jupiter', name: 'junit-jupiter-engine', version: '5.7.0'
+    implementation group: 'com.codeborne', name: 'selenide', version: '7.0.0'
+    implementation group: 'io.github.bonigarcia', name: 'webdrivermanager', version: '5.6.2'
+
+    implementation group: 'io.cucumber', name: 'cucumber-java', version: '7.13.0'
+
+    testImplementation group: 'io.qameta.allure', name: 'allure-junit5', version: '2.24.0'
+    testImplementation group: 'org.slf4j', name: 'slf4j-simple', version: '2.0.9'
+    testImplementation group: 'io.cucumber', name: 'cucumber-junit', version: '7.13.0'
+
+    runtimeOnly group: 'org.aspectj', name: 'aspectjweaver', version: '1.9.20.1'
+}
+
+test {
+    useJUnitPlatform()
+}
+
